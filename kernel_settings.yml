@@ -1,0 +1,6 @@
+---
+- name: apply kernel settings
+  hosts: all
+  become: true
+  roles:
+    - linux-system-roles.kernel_settings

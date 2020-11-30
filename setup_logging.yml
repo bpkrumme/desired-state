@@ -1,0 +1,6 @@
+---
+- name: set up logging using the linux-system-roles.logging role
+  hosts: all
+  become: yes
+  roles:
+    - linux-system-roles.logging

@@ -1,0 +1,8 @@
+---
+- name: set up tuned using the linux-system-roles.tuned role
+  hosts: all
+  become: yes
+  vars:
+    use_recommended_profile: true
+  roles:
+    - linux-system-roles.tuned

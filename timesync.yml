@@ -1,0 +1,6 @@
+---
+- name: set up time synchronization using the linux-system-roles.timesync role
+  hosts: all
+  become: yes
+  roles:
+    - linux-system-roles.timesync
