@@ -5,7 +5,7 @@
   tasks:
     - name: write the motd file to /etc/motd
       template:
-        src: files/motd.j2
+        src: templates/motd.j2
         dest: /etc/motd
         owner: root
         group: root
