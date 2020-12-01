@@ -3,4 +3,4 @@
   hosts: all
   become: yes
   roles:
-    - linux-system-roles.logging
+    - rhel-system-roles.logging

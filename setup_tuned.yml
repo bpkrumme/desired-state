@@ -5,4 +5,4 @@
   vars:
     use_recommended_profile: true
   roles:
-    - linux-system-roles.tuned
+    - rhel-system-roles.tuned
