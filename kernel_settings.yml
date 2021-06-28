@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    - rhel-system-roles.kernel_settings
+    - redhat.rhel_system_roles.kernel_settings

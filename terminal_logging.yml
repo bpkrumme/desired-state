@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    - rhel-system-roles.tlog
+    - redhat.rhel_system_roles.tlog
