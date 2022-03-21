@@ -1,16 +1,16 @@
 ---
-  - name: create an ansible user for ec2 instances
-    hosts: all
-    become: yes
-    tasks:
-      ansible.builtin.user:
-        name: ansible
+- name: create an ansible user for ec2 instances
+  hosts: all
+  become: yes
+  tasks:
+    ansible.builtin.user:
+      name: ansible
 
-      ansible.posix.authorized_key:
-        key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2ayIUTOZdw+7zuJAvxerIIDZGTP4GhQZJV14XOsj75U79S/8aa51YD10zytubsn6bFyBmEK2jdbEP6T5a2s9k6cD8olz2zMJsKkhVl6LC+c6q6nzcjAbdJ3bTey9KLVjujOEytfqUqF5XwmtvQYkNK80G2+yOF20WjZA/0NC3amxJqLWA8GwqbIcg/So1Vv+n2J9wHqSiMrHyfm+/rMvhZhNDeeCNAyw+jHpmNZ2vM4TCtCemaDEEsM/TYCIArybYr62XxxDqGve6Wn1moGYQ9R+9Sc+u1gzS7W8n9F83CLySHv2EE9IKogNn6j+UUqFEr4QgdIh69u39qor90GIjwDOuU853diiPxvE2rVlV9JhLwPfpGaH7gjvEihOuCrIQYAjP9SaLfczynT1o/Zj8J0E8gJZNOW0uqioQJr+yLjwj4oNe7ZiEobECIbZ0wfnociKMvLfJZKR5WzDKz1xiLivgSIsnmpR4hF2UqoCcDW0Wz+aT/71+0B2FOjB6/OU= ansible@idm.bk.lab'
-        user: ansible
+    ansible.posix.authorized_key:
+      key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2ayIUTOZdw+7zuJAvxerIIDZGTP4GhQZJV14XOsj75U79S/8aa51YD10zytubsn6bFyBmEK2jdbEP6T5a2s9k6cD8olz2zMJsKkhVl6LC+c6q6nzcjAbdJ3bTey9KLVjujOEytfqUqF5XwmtvQYkNK80G2+yOF20WjZA/0NC3amxJqLWA8GwqbIcg/So1Vv+n2J9wHqSiMrHyfm+/rMvhZhNDeeCNAyw+jHpmNZ2vM4TCtCemaDEEsM/TYCIArybYr62XxxDqGve6Wn1moGYQ9R+9Sc+u1gzS7W8n9F83CLySHv2EE9IKogNn6j+UUqFEr4QgdIh69u39qor90GIjwDOuU853diiPxvE2rVlV9JhLwPfpGaH7gjvEihOuCrIQYAjP9SaLfczynT1o/Zj8J0E8gJZNOW0uqioQJr+yLjwj4oNe7ZiEobECIbZ0wfnociKMvLfJZKR5WzDKz1xiLivgSIsnmpR4hF2UqoCcDW0Wz+aT/71+0B2FOjB6/OU= ansible@idm.bk.lab'
+      user: ansible
 
-      ansible.builtin.lineinfile:
-        create: yes
-        path: /etc/sudoers.d/ansible
-        line: 'ansible ALL=(ALL) NOPASSWD: ALL'
+    ansible.builtin.lineinfile:
+      create: yes
+      path: /etc/sudoers.d/ansible
+      line: 'ansible ALL=(ALL) NOPASSWD: ALL'
