@@ -1,0 +1,6 @@
+---
+- name: Set System-Wide Crypto Policy
+  hosts: all
+  become: yes
+  roles:
+    - redhat.rhel_system_roles.crypto_policies
